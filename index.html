@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Hub Tournament 2.0</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 60px auto;
+      background: rgba(0,0,0,0.7);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      padding: 36px 24px 28px 24px;
+      text-align: center;
+      animation: fadeIn 1s;
+    }
+    .logo {
+      width: 90px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px #ffd70033;
+    }
+    h1 {
+      color: #ffd700;
+      margin-bottom: 8px;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+    }
+    .event-date {
+      color: #25d366;
+      font-size: 1.08em;
+      margin-bottom: 18px;
+    }
+    .form-container {
+      margin-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      font-size: 1em;
+    }
+    button {
+      background: #ff4500;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-bottom: 4px;
+    }
+    button:hover {
+      background: #e63900;
+    }
+    #message {
+      margin-top: 15px;
+      color: yellow;
+      font-weight: bold;
+      min-height: 24px;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 0.95em;
+      color: #ffd700;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="gamehub-logo.png" alt="Game Hub Logo" class="logo"/>
+    <h1>Game Hub Tournament 2.0</h1>
+    <p class="event-date">🗓 25th June | 🕗 8:00 PM</p>
+    <div class="form-container">
+      <input type="email" id="email" placeholder="Enter Email" required />
+      <input type="password" id="password" placeholder="Enter Password" required />
+      <button onclick="register()">Register</button>
+      <button onclick="login()">Login</button>
+    </div>
+    <p id="message"></p>
+    <footer>
+      📞 Contact: 08169598952
+    </footer>
+  </div>
+</body>
+</html>

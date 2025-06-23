@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to Game Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #232526 0%, #414345 100%);
+      min-height: 100vh;
+      margin: 0;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto 0 auto;
+      padding: 36px 24px 24px 24px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 18px;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+      animation: fadeIn 1.2s;
+      text-align: center;
+      position: relative;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .logo {
+      width: 110px;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 16px rgba(37,211,102,0.13);
+      animation: popIn 1.2s;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.7);}
+      80% { transform: scale(1.1);}
+      100% { transform: scale(1);}
+    }
+    h1 {
+      font-size: 2em;
+      color: #ffd700;
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #0008;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 2px 8px #0008, 0 0 8px #ffd70055;}
+      to { text-shadow: 0 2px 16px #0008, 0 0 24px #ffd700cc;}
+    }
+    h2 {
+      color: #25d366;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 4px #0005;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+    }
+    ul li {
+      background: rgba(255,255,255,0.08);
+      margin: 7px 0;
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 1.08em;
+      letter-spacing: 0.5px;
+      box-shadow: 0 1px 4px #0002;
+      transition: background 0.2s;
+    }
+    ul li:hover {
+      background: #25d36633;
+    }
+    .event-date {
+      color: #ffd700;
+      font-size: 1.13em;
+      margin: 22px 0 18px 0;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 4px #0005;
+    }
+    .about-host {
+      background: #fff2;
+      border-radius: 10px;
+      padding: 14px 10px;
+      margin: 18px 0;
+      color: #fff;
+      font-size: 1.08em;
+      box-shadow: 0 1px 4px #0002;
+    }
+    .register-btn {
+      margin: 24px 0 0 0;
+      padding: 14px 38px;
+      background: linear-gradient(90deg, #25d366 60%, #128c7e 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.18em;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 12px #25d36633;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+    }
+    .register-btn:hover {
+      background: linear-gradient(90deg, #128c7e 60%, #25d366 100%);
+      transform: scale(1.04);
+    }
+    footer {
+      margin-top: 36px;
+      font-size: 1em;
+      color: #ffd700;
+      text-shadow: 0 1px 4px #0005;
+    }
+    /* Fun confetti effect */
+    .confetti {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .confetti span {
+      position: absolute;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: confetti-fall 2.5s linear infinite;
+    }
+    @keyframes confetti-fall {
+      0% { transform: translateY(-30px) rotate(0deg);}
+      100% { transform: translateY(650px) rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="confetti" id="confetti"></div>
+    <img src="https://th.bing.com/th/id/OIP.XZIr5vt8PdeSSn9cxAbCPAHaFj?rs=1&pid=ImgDetMain" alt="Game Hub Logo" class="logo" />
+    <h1>🎮 YOU ARE WELCOME TO GAME HUB TOURNAMENT 2.0 🎉</h1>
+    
+    <h2>🏆 Prizes</h2>
+    <ul>
+      <li>1st Winner: ₦200,000</li>
+      <li>2nd Winner: ₦100,000</li>
+      <li>3rd Winner: ₦50,000</li>
+    </ul>
+
+    <h2>🧾 Game Rules</h2>
+    <ul>
+      <li>No cheating or exploits allowed.</li>
+      <li>Fair play is mandatory.</li>
+      <li>Follow match timings strictly.</li>
+      <li>Be respectful to fellow players.</li>
+    </ul>
+
+    <h2>👤 About the Host</h2>
+    <div class="about-host">
+      <strong>Ndubusi Rex</strong> – A good and legit vendor and gamer.<br>
+      Trusted and well-known in the gaming community.
+    </div>
+
+    <p class="event-date">📅 Event Date: 25th June at 8:00 PM</p>
+
+    <a href="registration.html"><button class="register-btn">Register Now</button></a>
+    <footer>
+      <p>📞 Contact: 08169598952</p>
+    </footer>
+  </div>
+  <script>
+    // Fun confetti animation
+    const confettiColors = ['#ffd700', '#25d366', '#128c7e', '#ff4500', '#fff'];
+    const confetti = document.getElementById('confetti');
+    for(let i=0; i<30; i++) {
+      const span = document.createElement('span');
+      span.style.left = Math.random()*100 + '%';
+      span.style.background = confettiColors[Math.floor(Math.random()*confettiColors.length)];
+      span.style.animationDelay = (Math.random()*2) + 's';
+      confetti.appendChild(span);
+    }
+  </script>
+</body>
+</html>
